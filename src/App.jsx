@@ -1,7 +1,7 @@
 import './App.css'
 import Footer from './components/layouts/Footer'
 import Header from './components/layouts/Header'
-import MainLayout from './components/layouts/MainLayout'
+import MainLayout from './components/layouts/Layout'
 import Contador from './components/Contador'
 
 function App() {

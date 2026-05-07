@@ -1,9 +1,9 @@
 import Contador from "../Contador"
-import FormContainer from "../productos/FormContainer"
-import ItemListContainer from "../productos/ItemListContainer"
-import estilo from "./MainLayout.module.css"
+import FormContainer from "../items/FormContainer"
+import ItemListContainer from "../items/ItemListContainer"
+import estilo from "./Layout.module.css"
 
-const MainLayout = () => {
+const Layout = () => {
   return(
     <>
       <h1 className={estilo.titulo}>Ferreteria de Juancho</h1>
