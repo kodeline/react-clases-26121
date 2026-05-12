@@ -1,17 +1,18 @@
-import Contador from "../Contador"
-import FormContainer from "../items/FormContainer"
-import ItemListContainer from "../items/ItemListContainer"
-import estilo from "./Layout.module.css"
+import estilo from "./Layout.module.css";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-  return(
-    <>
-      <h1 className={estilo.titulo}>Ferreteria de Juancho</h1>
-      <h2 className={estilo.productos}>Probando Producto</h2>
-      <ItemListContainer />
-      <FormContainer />
-    </>
-  )
-}
+  return (
+    <div className={estilo.mainWrapper}>
+      <Header />
+      <main className={estilo.content}>
+        <Outlet/>
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
-export default MainLayout
+export default Layout;

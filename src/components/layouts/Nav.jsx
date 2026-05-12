@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Nav.module.css';
 
 const Nav = () => {
@@ -5,19 +6,19 @@ const Nav = () => {
     <nav className={styles.navContainer}>
       <ul className={styles.navList}>
         <li>
-          <a to="/tecnologia" className={styles.navLink}>
-           PlayStation
-          </a>
+          <Link to="/" className={styles.navLink}>
+           Inicio
+          </Link>
         </li>
         <li>
-          <a to="/moda" className={styles.navLink}>
-            PC
-          </a>
+          <Link to="/mensajito" className={styles.navLink}>
+            Mensajito
+          </Link>
         </li>
         <li>
-          <a to="/moda" className={styles.navLink}>
-            Xbox
-          </a>
+          <Link to="/contacto" className={styles.navLink}>
+            Contacto
+          </Link>
         </li>
       </ul>
     </nav>

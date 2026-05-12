@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import estilos from './Item.module.css'
+import { Link } from 'react-router-dom';
 
-function Item({ nombre, stock, precio, imagen }) {
+function Item({ nombre, stock, precio, imagen, id }) {
 
   const [cantidad, setCantidad] = useState(0);
   const [favorito, setFavorito] = useState(false);
@@ -12,7 +13,6 @@ function Item({ nombre, stock, precio, imagen }) {
   const incrementar = () => {
     if (cantidad < stock) 
       setCantidad(cantidad + 1)
-
   };
 
   const decrementar = () => {
@@ -22,7 +22,8 @@ function Item({ nombre, stock, precio, imagen }) {
 
   return (
     <div>
-      <h1>{nombre}</h1>
+      <Link to={`/producto/${id}`}>
+        <h1>{nombre}</h1>
       <h2>{precio}ARS</h2>
       <img src={imagen}/>
       <span 
@@ -36,7 +37,9 @@ function Item({ nombre, stock, precio, imagen }) {
       <button onClick={decrementar}> - </button>
       <p>{cantidad}</p>
       <button onClick={incrementar}> + </button>
-    </div>
+
+      </Link>
+          </div>
   );
 }
 
