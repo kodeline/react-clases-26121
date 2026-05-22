@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from 'react';
-
+// Esto es solo a modo ejemplo no usar en la pre-entrega 
 function Mensajito() {
 
   const [producto, setProducto] = useState([])

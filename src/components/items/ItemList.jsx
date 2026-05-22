@@ -1,13 +1,15 @@
-import Item from "./Item"
+// ItemList.jsx
+import Item from './Item';
+import estilos from './ItemList.module.css';
 
-const ItemList = ({productos}) => {
+const ItemList = ({ productos }) => {
   return (
-    <div>
-      {productos.map(prod => 
+    <section className={estilos.grilla}>
+      {productos.map(prod =>
         <Item key={prod.id} {...prod} />
       )}
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default ItemList
+export default ItemList;
